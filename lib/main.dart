@@ -32,7 +32,7 @@ class MyAppState extends ChangeNotifier {
     current = WordPair.random();
     notifyListeners();
   }
- var favorites = <WordPair>[];
+ var favorites = <WordPair>[]; //list containing favourited wordpairs
 
   void toggleFavorite() {
     if (favorites.contains(current)) {
@@ -172,7 +172,7 @@ class BigCard extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Text(pair.asUpperCase,
          style: style,
-         semanticsLabel: "${pair.first} ${pair.second}"),
+         semanticsLabel: "${pair.first} ${pair.second}"),//for accesibility
       ),
     );
   }
